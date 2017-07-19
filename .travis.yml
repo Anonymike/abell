@@ -19,4 +19,4 @@ script:
   - python tests.py
 
 before_script:
-  - mongo abell --eval 'db.addUser("abell", "123456");'
+  - mongo abell --eval 'add_user('abell', '123456', roles=[{'role': 'readWrite', 'db': 'abell'}])'
