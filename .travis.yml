@@ -17,3 +17,6 @@ install:
 
 script:
   - python tests.py
+
+before_script:
+  - mongo abell --eval 'db.addUser("abell", "123456");'
